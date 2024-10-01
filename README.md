@@ -1,41 +1,40 @@
-# Psiu APi
+# Psiu API
 
 ## Requisitos
 
 ### Aluno
-- [] Cadastrar aluno
-  - [] Não deve ser possivel cadastrar
+- [X] Cadastrar um aluno
+ - [X] Não deve ser possível cadastrar RA já cadastrado
+ - [X] Gerar senha aleatória para primeiro acesso
+ - [] Criar hash para a senha aleatória gerada
 
-- [] Editar aluno
-  - [] Deve ser possivel alterar o nome e data de nascimento do aluno
+- [x] Editar aluno
+ - [x] Deve ser possível alterar o nome e data de nascimento do aluno
 
-- [] Atulizar senha
- - [] Não deve ser possivel colocar uma senha fraca
+- [] Atualizar senha
+ - [] Não deve ser possível colocar uma senha fraca
 
-- [] Deletar aluno 
-  - [] Deve utilizar soft delete
+- [] Deletar aluno
+ - [] Deve utilizar soft delete
+ 
+- [x] Buscar alunos
+  - [] Criar paginaçao na busca de alunos
 
-- [] Buscar alunos
 ### Post
-- [] Criar Post
-- [] Editar Post
-- [] Deletar Post
-- [] Buscar Posta
-- [] Buscar Postagems por alunos
 
-### ComentarioPost
-- [] Criar comentario
-- [] Editar comentario
-- [] Deletar comentario
+- [] Criar post
+- [] Editar post
+- [] Deletar post
+- [] Buscar posts
+- [] Buscar posts por aluno
 
-### CurtidasPosta
-- [] Criar curtida
-- [] Deletar curtida
+### ComentarioPostagem
 
-### ReacaoComentarios
-- [] Criar reaçao
-- [] Deletar reaçao
+- [] Criar comentário
+- [] Editar comentário
+- [] Deletar comentário
 
-### ReacaoPost
-- [] Criar reaçao
-- [] Deletar reaçao
+### Reacaodepoimento
+
+- [] Criar reação
+- [] Deletar reação
