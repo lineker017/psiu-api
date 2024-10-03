@@ -22,9 +22,12 @@
       "@http/": [
         "./src/http/*"
       ],
+      "@lib/*": [
+        "./src/lib/*"
+      ],
       "@utils/*": [
         "./src/utils/*"
-      ]
+      ],
     }
   }
 }

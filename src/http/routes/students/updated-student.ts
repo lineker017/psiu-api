@@ -17,6 +17,17 @@ export async function updatedStudent(
   const { id } = request.params
   const { birthdate, name } = request.body as Body
 
+  const student = db.findUnique('students', { id })
+
+  if (!student) {
+    response.status(400).json({
+      result: 'error',
+      message: 'student not found',
+    })
+
+    return
+  }
+
   db.updated('students', id, {
     name,
     birthdate: new Date(birthdate),
