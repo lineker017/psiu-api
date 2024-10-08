@@ -8,7 +8,7 @@ export async function getStudents(
   const students = db.findMany('students', { active: true })
 
   response.json({
-    result: 'success',
+    result: 'sucess',
     data: students,
   })
 }

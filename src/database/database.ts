@@ -47,6 +47,8 @@ export class Database {
     return data
   }
 
+  // where = { id: 1 }
+
   // SELECT UNIQUE
   findUnique(table: string, where: Where): Row | null {
     const data = this.#database[table] ?? []
@@ -59,7 +61,7 @@ export class Database {
   }
 
   // INSERT
-  insert(table: string, data: Row): Row {
+  create(table: string, data: Row): Row {
     if (Array.isArray(this.#database[table])) {
       this.#database[table].push(data)
     } else {
@@ -72,7 +74,7 @@ export class Database {
   }
 
   // UPDATE
-  updated(
+  update(
     table: string,
     id: string | number,
     data: Omit<Row, 'id'>,
@@ -87,8 +89,8 @@ export class Database {
 
       return { id, ...data }
     }
-
     return null
   }
+
   // DELETE
 }

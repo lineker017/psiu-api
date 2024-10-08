@@ -5,11 +5,18 @@ interface Params {
   id: string
 }
 
-export async function inactivateStudent(
+interface Body {
+  name: string
+  birthdate: string
+}
+
+export async function updateStudent(
   request: Request<Params>,
   response: Response,
 ): Promise<void> {
+  const { studentId } = request
   const { id } = request.params
+  const { name, birthdate } = request.body as Body
 
   const student = db.findUnique('students', { id })
 
@@ -23,12 +30,13 @@ export async function inactivateStudent(
   }
 
   db.update('students', id, {
-    active: false,
+    name,
+    birthdate: new Date(birthdate),
     updatedAT: new Date(),
   })
 
   response.json({
     result: 'sucess',
-    message: 'Student Inactivated',
+    message: 'Student updated',
   })
 }
