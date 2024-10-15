@@ -12,24 +12,28 @@
   - [X] Deve ser possível alterar o nome e data de nascimento do aluno
   - [X] Não deve ser possível atualizar um student inativo
 
-- [] Atualizar senha
-  - [] Não deve ser possível colocar uma senha fraca
+- [x] Atualizar senha
+  - [x] Não deve ser possível colocar uma senha fraca
+  - [x] Checar a senha atual do estudante
+  - [x] confirmar nova senha duas vezes 
 
 - [X] Deletar aluno
   - [X] Deve utilizar soft delete
  
 - [X] Buscar alunos
-  - [] Criar páginação na busca de alunos
+  - [x] Criar páginação na busca de alunos
 
 ### Autenticação
 
-- [x] Autenticação com senha
- - [x] Verificar se o RA existe
- - [x] Criar um token de autenticação
-- [] Criar middleware de autenticaçao
-  - [] Não deve ser possivel passar um estudante inativo/inexistente
-  - [] Deve verificar o id do estudante com o id presente no token
-  - [] deve verificar a validade do token 
+- [X] Autenticação com senha
+  - [X] não deve ser possível autenticar um estudante inativo
+  - [X] Verificar se o RA existe
+  - [X] Criar um token de autenticação
+- [X] Criar middleware de autenticação
+  - [X] Não deve ser possível passar um estudante inativo/inexistente
+  - [X] Deve verificar o id do estudante com id presente no token
+  - [X] Deve verificar a validade do token
+ 
 
 ### Post
 

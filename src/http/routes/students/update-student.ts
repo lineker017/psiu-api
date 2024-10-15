@@ -15,10 +15,9 @@ export async function updateStudent(
   response: Response,
 ): Promise<void> {
   const { studentId } = request
-  const { id } = request.params
   const { name, birthdate } = request.body as Body
 
-  const student = db.findUnique('students', { id })
+  const student = db.findUnique('students', { id: studentId })
 
   if (!student) {
     response.status(400).json({
@@ -29,7 +28,7 @@ export async function updateStudent(
     return
   }
 
-  db.update('students', id, {
+  db.update('students', studentId, {
     name,
     birthdate: new Date(birthdate),
     updatedAT: new Date(),
