@@ -12,16 +12,16 @@
   - [X] Deve ser possível alterar o nome e data de nascimento do aluno
   - [X] Não deve ser possível atualizar um student inativo
 
-- [x] Atualizar senha
-  - [x] Não deve ser possível colocar uma senha fraca
-  - [x] Checar a senha atual do estudante
-  - [x] confirmar nova senha duas vezes 
+- [X] Atualizar senha
+  - [X] Não deve ser possível colocar uma senha fraca
+  - [X] Checar a senha atual do estudante
+  - [X] confirmar nova senha duas vezes 
 
 - [X] Deletar aluno
   - [X] Deve utilizar soft delete
  
 - [X] Buscar alunos
-  - [x] Criar páginação na busca de alunos
+  - [] Criar páginação na busca de alunos
 
 ### Autenticação
 
@@ -37,8 +37,9 @@
 
 ### Post
 
-- [] Criar post
+- [X] Criar post
 - [] Editar post
+ - [] Deve ser possível editar o conteúdo do post
 - [] Deletar post
 - [] Buscar posts
 - [] Buscar posts por aluno

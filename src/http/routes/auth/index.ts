@@ -7,7 +7,9 @@ import { updatePassword } from './update-password'
 const authRouter = Router()
 
 authRouter.post('/password', authenticateWithPassword)
+
 authRouter.use(authentication)
+
 authRouter.patch('/password', updatePassword)
 
 export { authRouter }

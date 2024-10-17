@@ -20,7 +20,7 @@ export async function updatePassword(
   if (!student) {
     response.status(401).json({
       result: 'error',
-      message: ' Strudent not found',
+      message: ' Student not found',
     })
 
     return
@@ -31,7 +31,7 @@ export async function updatePassword(
   if (!passwordMatch) {
     response.status(401).json({
       result: 'error',
-      message: ' Incorrect password ',
+      message: 'Incorrect password ',
     })
 
     return
@@ -40,7 +40,7 @@ export async function updatePassword(
   if (newPassword !== confirmNewPassword) {
     response.status(400).json({
       result: 'error',
-      message: 'Passwords do not match',
+      message: 'Passwords do not macth',
     })
 
     return
@@ -63,11 +63,11 @@ export async function updatePassword(
 
   db.update('students', studentId, {
     passwordHash: passwordEncrypt,
-    updatedAt: new Date(),
+    updatedAT: new Date(),
   })
 
-  response.json({
+  response.status(400).json({
     result: 'success',
-    message: 'Password updated',
+    message: 'Passwords updated',
   })
 }

@@ -1,1 +1,48 @@
-{"students":[{"id":"ec204d61-1ef2-4f0c-a8a5-58883d1f6f52","ra":"RA231234552","name":"lineker","passwordHash":"$2b$10$rU5hJU.Wp19nmAE7tdqWEuwnlE4Y3Rvrp.omXL0NE53pa3Vke2vEi","birthdate":"1999-07-10T00:00:00.000Z","active":true,"createdAT":"2024-10-14T23:48:37.710Z","updatedAT":"2024-10-14T23:48:37.710Z","updatedAt":"2024-10-15T00:01:44.336Z"}]}
+{
+  "students": [
+    {
+      "id": "4c4ac860-28d5-49e4-9110-1c282c80478d",
+      "ra": "RA123456",
+      "name": "lineker",
+      "passwordHash": "$2b$10$NOD1Ej9zK2P7KyFdb.j4z.d7JURjvswOaG6xqkNRfVtJlDk9wbfGO",
+      "birthdate": "2007-06-28T00:00:00.000Z",
+      "active": true,
+      "createdAT": "2024-10-16T23:41:16.371Z",
+      "updatedAT": "2024-10-16T23:41:16.371Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": "56d89211-c6c3-47ab-a8af-15df3a7c5a18",
+      "studentId": "4c4ac860-28d5-49e4-9110-1c282c80478d",
+      "content": "test",
+      "active": false,
+      "publishedAT": "2024-10-16T23:43:02.374Z",
+      "updatedAT": "2024-10-17T01:11:17.783Z"
+    },
+    {
+      "id": "c4e729c0-8aa4-47a9-8192-a272d1707264",
+      "studentId": "4c4ac860-28d5-49e4-9110-1c282c80478d",
+      "content": "Espera que seu dia seja feliz",
+      "active": false,
+      "publishedAT": "2024-10-17T00:22:29.920Z",
+      "updatedAT": "2024-10-17T01:15:16.255Z"
+    },
+    {
+      "id": "13c5a0bf-c7e2-4b1a-83ff-4b8aa3c62592",
+      "studentId": "4c4ac860-28d5-49e4-9110-1c282c80478d",
+      "content": "test",
+      "active": false,
+      "publishedAT": "2024-10-17T01:11:33.167Z",
+      "updatedAT": "2024-10-17T01:15:29.422Z"
+    },
+    {
+      "id": "6f04086f-e26f-48e2-b91a-926180acc21a",
+      "studentId": "4c4ac860-28d5-49e4-9110-1c282c80478d",
+      "content": "boa",
+      "active": true,
+      "publishedAT": "2024-10-17T01:14:59.431Z",
+      "updatedAT": null
+    }
+  ]
+}
