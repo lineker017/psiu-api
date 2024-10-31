@@ -2,28 +2,28 @@ import { db } from '@database/client'
 import { Request, Response } from 'express'
 
 interface Params {
-  postId: string
+  reactionId: string
 }
 
-export async function inactivatePost(
+export async function deletePostReaction(
   request: Request<Params>,
   response: Response,
-): Promise<void> {
+) {
   const { studentId } = request
-  const { postId } = request.params
+  const { reactionId } = request.params
 
-  const post = db.findUnique('posts', { id: postId })
+  const reaction = db.findUnique('posts_reactions', { id: reactionId })
 
-  if (!post) {
+  if (!reaction) {
     response.status(400).json({
       result: 'error',
-      message: 'Post not found',
+      message: 'Reaction not found',
     })
 
     return
   }
 
-  if (post.studentId !== studentId) {
+  if (reaction.studentId !== studentId) {
     response.status(401).json({
       result: 'error',
       message: 'Operation not allowed',
@@ -32,13 +32,10 @@ export async function inactivatePost(
     return
   }
 
-  db.update('posts', postId, {
-    active: false,
-    updatedAt: new Date(),
-  })
+  db.delete('posts_reactions', reactionId)
 
   response.json({
     result: 'success',
-    message: 'Post deleted',
+    message: 'Reaction removed',
   })
 }

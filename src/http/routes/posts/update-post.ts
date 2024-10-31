@@ -7,7 +7,6 @@ interface Params {
 
 interface Body {
   content: string
-  updatedAT: string
 }
 
 export async function updatePost(
@@ -32,18 +31,19 @@ export async function updatePost(
   if (post.studentId !== studentId) {
     response.status(401).json({
       result: 'error',
-      message: 'opration not allowed',
+      message: 'Operation not allowed',
     })
 
     return
   }
+
   db.update('posts', postId, {
     content,
-    updatedAT: new Date(),
+    updatedAt: new Date(),
   })
 
   response.json({
-    result: 'sucess',
-    message: 'Post updated',
+    result: 'success',
+    message: 'Post upated',
   })
 }

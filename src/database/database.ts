@@ -27,7 +27,7 @@ export class Database {
   }
 
   #persist(): void {
-    fs.writeFile(databasePath, JSON.stringify(this.#database))
+    fs.writeFile(databasePath, JSON.stringify(this.#database, null, 2))
   }
 
   // SELECT MANY
@@ -46,8 +46,6 @@ export class Database {
 
     return data
   }
-
-  // where = { id: 1 }
 
   // SELECT UNIQUE
   findUnique(table: string, where: Where): Row | null {
@@ -89,8 +87,21 @@ export class Database {
 
       return { id, ...data }
     }
+
     return null
   }
 
   // DELETE
+  delete(table: string, id: string | number): Row | null {
+    const rowIndex = this.#database[table].findIndex((row) => row.id === id)
+
+    if (rowIndex > -1) {
+      const [deletedRow] = this.#database[table].splice(rowIndex, 1)
+      this.#persist()
+
+      return deletedRow
+    }
+
+    return null
+  }
 }
