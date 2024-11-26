@@ -9,6 +9,26 @@
       "active": true,
       "createdAt": "2024-11-22T01:00:26.962Z",
       "updatedAt": "2024-11-22T01:00:26.962Z"
+    },
+    {
+      "id": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
+      "ra": "RA2",
+      "name": "Lineker Peron",
+      "passwordHash": "$2b$10$mAGgrU8g4UZaDV5BmCywM.Ee2ZdApkcConvHyRQp7mtxJkyjmM526",
+      "birthdate": "2007-06-28T00:00:00.000Z",
+      "active": true,
+      "createdAt": "2024-11-25T23:29:01.614Z",
+      "updatedAt": "2024-11-25T23:29:01.614Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": "6bd5422f-67b0-42c2-b7db-dcf279fab553",
+      "studentId": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
+      "content": "Teste krai kkk",
+      "active": true,
+      "publishedAt": "2024-11-26T01:00:33.881Z",
+      "updatedAt": null
     }
   ]
 }
