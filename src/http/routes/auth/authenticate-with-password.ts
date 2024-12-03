@@ -47,11 +47,11 @@ export async function authenticateWithPassword(
 
   const token = sign({ id: student.id }, 'psiu', { expiresIn: '3d' })
 
-  // seta o token no cookie da response
+  // Seta o token no cookie do response
   response.cookie('token', token, {
     httpOnly: true,
     sameSite: 'lax',
-    maxAge: 7 * 24 * 60 * 1000,
+    maxAge: 7 * 24 * 60 * 60 * 1000,
   })
 
   response.json({

@@ -11,111 +11,78 @@
       "updatedAt": "2024-11-22T01:00:26.962Z"
     },
     {
-      "id": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
+      "id": "2bb0d081-c386-4eaf-8267-9f56c5a5735e",
       "ra": "RA2",
-      "name": "Lineker Peron",
-      "passwordHash": "$2b$10$mAGgrU8g4UZaDV5BmCywM.Ee2ZdApkcConvHyRQp7mtxJkyjmM526",
-      "birthdate": "2007-06-28T00:00:00.000Z",
+      "name": "Lineker",
+      "passwordHash": "$2b$10$DqxZhNtQVIqsGRO4NaLvoeCP/q8hYY06zuKP2oks5evZvuHlLuUIm",
+      "birthdate": "1999-07-10T00:00:00.000Z",
       "active": true,
-      "createdAt": "2024-11-25T23:29:01.614Z",
-      "updatedAt": "2024-11-25T23:29:01.614Z"
+      "createdAt": "2024-11-23T02:13:18.786Z",
+      "updatedAt": "2024-11-23T02:13:18.786Z"
     }
   ],
   "posts": [
     {
-      "id": "6bd5422f-67b0-42c2-b7db-dcf279fab553",
-      "studentId": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
-      "content": "Teste krai kkk",
+      "id": "3d64b321-6fc1-4082-9c8a-4d076168a2c3",
+      "studentId": "2bb0d081-c386-4eaf-8267-9f56c5a5735e",
+      "content": "Post do RA2",
       "active": true,
-      "publishedAt": "2024-11-26T01:00:33.881Z",
+      "publishedAt": "2024-11-28T23:51:57.107Z",
       "updatedAt": null
     },
     {
-      "id": "c0b316d2-2ed5-42f6-a88e-956413629f65",
-      "studentId": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
-      "content": "boa\n",
+      "id": "74ac0b39-21dc-4c3c-8c92-b4226dd9f5c9",
+      "studentId": "0d97912d-77ac-47a4-a086-655b383a71f2",
+      "content": "Post do RA1",
       "active": true,
-      "publishedAt": "2024-11-26T23:28:27.370Z",
+      "publishedAt": "2024-11-28T23:52:09.563Z",
       "updatedAt": null
     },
     {
-      "id": "e454ba68-8ba8-4a81-b4a9-0fb4429084c1",
-      "studentId": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
-      "content": "ordem",
+      "id": "5c6b6187-8aca-43d9-b680-d52102c2f5ff",
+      "studentId": "0d97912d-77ac-47a4-a086-655b383a71f2",
+      "content": "Olá mundo!",
       "active": true,
-      "publishedAt": "2024-11-26T23:38:14.098Z",
-      "updatedAt": null
-    },
-    {
-      "id": "0d54d023-9fed-4d8c-b414-662e1461f763",
-      "studentId": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
-      "content": "coment 2\n",
-      "active": true,
-      "publishedAt": "2024-11-26T23:41:01.521Z",
-      "updatedAt": null
-    },
-    {
-      "id": "7527aa63-9727-4441-a37b-77eb3b10c9be",
-      "studentId": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
-      "content": "mo paz",
-      "active": true,
-      "publishedAt": "2024-11-27T00:02:34.463Z",
-      "updatedAt": null
-    },
-    {
-      "id": "baa0d93c-26f4-4214-be43-14abc5cb41b9",
-      "studentId": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
-      "content": "test contexto",
-      "active": true,
-      "publishedAt": "2024-11-27T01:15:22.624Z",
+      "publishedAt": "2024-11-29T01:20:02.520Z",
       "updatedAt": null
     }
   ],
   "comments": [
     {
-      "id": "d9972fd0-804e-49ab-970b-b5340294f160",
-      "studentId": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
-      "postId": "0d54d023-9fed-4d8c-b414-662e1461f763",
-      "content": "foda-se",
+      "id": "49aaad89-464d-4fc2-bfe8-2275ce167c81",
+      "studentId": "0d97912d-77ac-47a4-a086-655b383a71f2",
+      "postId": "5c6b6187-8aca-43d9-b680-d52102c2f5ff",
+      "content": "Comentário 10",
       "active": true,
-      "commentedAt": "2024-11-26T23:55:13.577Z",
+      "commentedAt": "2024-11-29T01:28:30.003Z",
       "updatedAt": null
     },
     {
-      "id": "ef86b7d9-6eff-44c9-9d7a-d92d8ddaec5d",
-      "studentId": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
-      "postId": "0d54d023-9fed-4d8c-b414-662e1461f763",
-      "content": "test pra limpar input",
+      "id": "ba3de812-798a-4c48-a44e-ee2236f5ef0d",
+      "studentId": "0d97912d-77ac-47a4-a086-655b383a71f2",
+      "postId": "5c6b6187-8aca-43d9-b680-d52102c2f5ff",
+      "content": "Comentário 2",
       "active": true,
-      "commentedAt": "2024-11-26T23:57:54.960Z",
+      "commentedAt": "2024-11-29T01:29:54.201Z",
       "updatedAt": null
-    },
+    }
+  ],
+  "posts_reactions": [
     {
-      "id": "c83bad5f-7948-4ef8-9680-785c1a581d86",
-      "studentId": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
-      "postId": "0d54d023-9fed-4d8c-b414-662e1461f763",
-      "content": "test 2",
-      "active": true,
-      "commentedAt": "2024-11-26T23:58:04.927Z",
-      "updatedAt": null
-    },
+      "id": "49c2a459-d8e0-497a-a078-2a2677ffbe0a",
+      "studentId": "0d97912d-77ac-47a4-a086-655b383a71f2",
+      "postId": "5c6b6187-8aca-43d9-b680-d52102c2f5ff",
+      "type": 0,
+      "reactedAt": "2024-11-30T00:19:36.542Z"
+    }
+  ],
+  "comments_reactions": [
     {
-      "id": "4cd28f50-1bc6-46d8-b737-f7256c4ebd0c",
-      "studentId": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
-      "postId": "0d54d023-9fed-4d8c-b414-662e1461f763",
-      "content": "test 3",
-      "active": true,
-      "commentedAt": "2024-11-26T23:58:20.223Z",
-      "updatedAt": null
-    },
-    {
-      "id": "41df5511-154e-4dd2-b3c9-c45b1e5560d4",
-      "studentId": "bdd0bcb5-5399-4295-bd08-23145f69ad41",
-      "postId": "0d54d023-9fed-4d8c-b414-662e1461f763",
-      "content": "test 3",
-      "active": true,
-      "commentedAt": "2024-11-26T23:58:23.340Z",
-      "updatedAt": null
+      "id": "6bfd4ed9-27c1-4476-989c-a8eebb1702be",
+      "studentId": "2bb0d081-c386-4eaf-8267-9f56c5a5735e",
+      "commentId": "49aaad89-464d-4fc2-bfe8-2275ce167c81",
+      "type": 4,
+      "reactedAt": "2024-12-03T01:30:12.659Z"
     }
   ]
 }
