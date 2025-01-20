@@ -1,4 +1,4 @@
-import { db } from '@database/client'
+import { prisma } from '@lib/prisma'
 import { Request, Response } from 'express'
 
 export async function getPosts(
@@ -7,26 +7,42 @@ export async function getPosts(
 ): Promise<void> {
   const { studentId } = request
 
-  const posts = db.findMany('posts', { active: true })
+  const posts = await prisma.post.findMany({
+    where: {
+      active: true,
+    },
+  })
 
   const sortedPosts = posts.sort(
     (a, b) =>
       new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
   )
 
-  const postsResponse = sortedPosts.map((post) => {
-    const comments = db.findMany('comments', { postId: post.id, active: true })
-    const reactions = db.findMany('posts_reactions', { postId: post.id })
+  const postsResponse = sortedPosts.map(async (post) => {
+    const comments = await prisma.comment.findMany({
+      where: {
+        id: post.id,
+        active: true,
+      },
+    })
 
-    const summaryComments = comments.map((comment) => {
-      const reactions = db.findMany('comments_reactions', {
-        commentId: comment.id,
+    const reactions = await prisma.postReaction.findMany({
+      where: {
+        id: post.id,
+      },
+    })
+
+    const summaryComments = comments.map(async (comment) => {
+      const reactions = await prisma.commentReaction.findMany({
+        where: {
+          commentId: comment.id,
+        },
       })
 
       const summaryReactions = reactions.map((reaction) => ({
         id: reaction.id,
-        postId: reaction.postId,
-        isOwner: reaction.studentId === studentId,
+        postId: post.id,
+        isOwner: reaction.ownerId === studentId,
         type: reaction.type,
         reactedAt: reaction.reactedAt,
       }))
@@ -34,7 +50,7 @@ export async function getPosts(
       return {
         id: comment.id,
         postId: comment.postId,
-        isOwner: comment.studentId === studentId,
+        isOwner: comment.ownerId === studentId,
         content: comment.content,
         commentedAt: comment.commentedAt,
         updatedAt: comment.updatedAt,
@@ -45,14 +61,14 @@ export async function getPosts(
     const summaryReactions = reactions.map((reaction) => ({
       id: reaction.id,
       postId: reaction.postId,
-      isOwner: reaction.studentId === studentId,
+      isOwner: reaction.ownerId === studentId,
       type: reaction.type,
       reactedAt: reaction.reactedAt,
     }))
 
     const summaryPost = {
       id: post.id,
-      isOwner: post.studentId === studentId,
+      isOwner: post.ownerId === studentId,
       content: post.content,
       publishedAt: post.publishedAt,
       updatedAt: post.updatedAt,
