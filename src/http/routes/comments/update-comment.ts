@@ -49,6 +49,7 @@ export async function updateComment(
       content,
     },
   })
+
   response.json({
     result: 'success',
     message: 'Comentário atualizado',

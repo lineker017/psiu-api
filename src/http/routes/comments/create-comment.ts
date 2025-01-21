@@ -34,10 +34,9 @@ export async function createComment(
 
   await prisma.comment.create({
     data: {
-      ownerId: studentId,
-      postId,
       content,
-      commentedAt: new Date(),
+      postId,
+      ownerId: studentId,
     },
   })
 

@@ -35,8 +35,8 @@ export async function createPostReaction(
 
   const postReaction = await prisma.postReaction.findFirst({
     where: {
-      id: studentId,
       postId,
+      ownerId: studentId,
     },
   })
 

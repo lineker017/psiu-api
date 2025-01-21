@@ -17,11 +17,7 @@ export async function updatePost(
   const { postId } = request.params
   const { content } = request.body as Body
 
-  const post = await prisma.post.findUnique({
-    where: {
-      id: postId,
-    },
-  })
+  const post = await prisma.post.findUnique({ where: { id: postId } })
 
   if (!post) {
     response.status(400).json({

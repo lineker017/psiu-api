@@ -41,7 +41,7 @@ export async function inactivatePost(
       id: postId,
     },
     data: {
-      active: true,
+      active: false,
     },
   })
 

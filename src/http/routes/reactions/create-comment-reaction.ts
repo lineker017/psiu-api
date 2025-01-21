@@ -78,7 +78,6 @@ export async function createCommentReaction(
       ownerId: studentId,
       commentId,
       type,
-      reactedAt: new Date(),
     },
   })
 

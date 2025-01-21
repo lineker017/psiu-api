@@ -1,7 +1,8 @@
 import { encrytPassword } from '@lib/bcrypt'
 import { prisma } from '@lib/prisma'
-// import { generatePassword } from '@utils/generate-password'
 import { Request, Response } from 'express'
+
+// import { generatePassword } from '@utils/generate-password'
 
 interface Body {
   ra: string
@@ -15,9 +16,10 @@ export async function createStudent(
 ): Promise<void> {
   const { ra, name, birthdate } = request.body as Body
 
-  // const studentByRa = db.findMany('students', { ra })
   const studentByRa = await prisma.student.findUnique({
-    where: { ra },
+    where: {
+      ra,
+    },
   })
 
   if (studentByRa) {
@@ -40,6 +42,7 @@ export async function createStudent(
       birthdate: new Date(birthdate),
     },
   })
+
   response.status(201).json({
     result: 'success',
     message: 'Estudante criado',

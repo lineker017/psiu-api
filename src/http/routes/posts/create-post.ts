@@ -14,9 +14,8 @@ export async function createPost(
 
   await prisma.post.create({
     data: {
-      ownerId: studentId,
       content,
-      publishedAt: new Date(),
+      ownerId: studentId,
     },
   })
 
